@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+    <h3>{{ title }}</h3>
+    {% if total %}
+        <p>Общее количество (из БД или представления): {{ total }}</p>
+    {% endif %}
+    {% if products %}
+        <p>Общее количество (в шаблоне): {{ products|sum_quantity }}</p>
+    {% endif %}
+{% endblock %}
