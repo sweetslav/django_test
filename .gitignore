@@ -1,1 +1,6 @@
 /my_project/media/
+/static/
+.idea
+*.log
+*.sqlite3
+*.pyc
